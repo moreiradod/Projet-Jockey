@@ -48,7 +48,7 @@ namespace Projet_Jockey
                 Console.Clear(); //Nettoie la console, dès qu'une touche est pressée. 
                 for (int i = 0; i < tChevaux.Length; i++)
                 {
-                    Console.CursorLeft = iArrive + 15;
+                    Console.CursorLeft = iArrive + 14;
                     Console.Write("|"); // détermine le point d'arrivé.
                     Console.CursorLeft = 0;
                     tChevaux[i] += random.Next(4);
@@ -64,7 +64,7 @@ namespace Projet_Jockey
 
             int iMeilleurDisatance = tChevaux.Max();
             int iMeilleurCheval = tChevaux.ToList().IndexOf(iMeilleurDisatance);
-            Console.WriteLine("Le cheval {0} est vainqueur", iMeilleurCheval);
+            Console.WriteLine("Le cheval {0} est vainqueur", iMeilleurCheval + 1);
             Console.ReadKey();
         }
     }
