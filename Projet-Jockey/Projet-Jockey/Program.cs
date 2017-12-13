@@ -40,11 +40,12 @@ namespace Projet_Jockey
             Console.WriteLine("****************************************\n");
             Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");//Consigne de l'exercice.
 
-            Console.ReadKey();
-            Console.Clear(); //Nettoie la console, dès qu'une touche est pressée. 
+            
 
             do
             {
+                Console.ReadKey();
+                Console.Clear(); //Nettoie la console, dès qu'une touche est pressée. 
                 for (int i = 0; i < tChevaux.Length; i++)
                 {
                     Console.CursorLeft = iArrive + 15;
@@ -60,8 +61,10 @@ namespace Projet_Jockey
                     
             }
             while (!bfin);
-             
 
+            int iMeilleurDisatance = tChevaux.Max();
+            int iMeilleurCheval = tChevaux.ToList().IndexOf(iMeilleurDisatance);
+            Console.WriteLine("Le cheval {0} est vainqueur", iMeilleurCheval);
             Console.ReadKey();
         }
     }
