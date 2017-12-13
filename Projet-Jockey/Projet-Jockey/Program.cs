@@ -43,7 +43,16 @@ namespace Projet_Jockey
             Console.ReadKey();
             Console.Clear(); //Nettoie la console, dès qu'une touche est pressée. 
 
-            Console.Write("salut {0}", strNom);
+            do
+            {
+                for (int i = 0; i < tChevaux.Length; i++)
+                    Console.CursorLeft = iArrive + 15;
+                    Console.Write("|");
+                    Console.CursorLeft = 0;
+            }
+            while ();
+             
+
             Console.ReadKey();
         }
     }
