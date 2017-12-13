@@ -22,7 +22,7 @@ namespace Projet_Jockey
         static void Main(string[] args)
         {
             int[] tChevaux = new int[] { 0, 0, 0, 0 };
-            bool bfalse = false;
+            bool bfin = false;
             Random random = new Random();
             string strNom;
             string strParis;
@@ -46,11 +46,20 @@ namespace Projet_Jockey
             do
             {
                 for (int i = 0; i < tChevaux.Length; i++)
+                {
                     Console.CursorLeft = iArrive + 15;
-                    Console.Write("|");
+                    Console.Write("|"); // détermine le point d'arrivé.
                     Console.CursorLeft = 0;
+                    tChevaux[i] += random.Next(4);
+                    Console.WriteLine("Cheval {0,2} : {1}#", i + 1, new string('-', tChevaux[i]));
+                    if (tChevaux[i] > iArrive)
+                    {
+                        bfin = true;
+                    }
+                }
+                    
             }
-            while ();
+            while (!bfin);
              
 
             Console.ReadKey();
