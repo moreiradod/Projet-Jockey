@@ -21,22 +21,21 @@ namespace Projet_Jockey
         const int iArrive = 50;
         static void Main(string[] args)
         {
-            int[] tChevaux = new int[] { 0, 0, 0, 0 };
+            int[] tChevaux = new int[] { 0, 0, 0, 0 }; //déclaration d'un tableau
             bool bfin = false;
             Random random = new Random();
             string strNom;
-            string strParis;
+            int iParis;
 
             Console.WriteLine("Bienvenue à la course des chevaux !!");
             Console.WriteLine("****************************************");
             Console.Write("Quel est votre nom ? ");
             strNom = Console.ReadLine();
-
-            //Console.Write("salut {0}", strNom);
             Console.WriteLine("\n*       Les paris sont ouverts !       *");
             Console.WriteLine("****************************************");
             Console.Write("Sur quel cheval désirez vous misez (1,2,3 ou 4)? ");
-            strParis = Console.ReadLine();
+            iParis = Convert.ToInt32(Console.ReadLine());
+
             Console.WriteLine("****************************************\n");
             Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");//Consigne de l'exercice.
 
@@ -48,11 +47,12 @@ namespace Projet_Jockey
                 Console.Clear(); //Nettoie la console, dès qu'une touche est pressée. 
                 for (int i = 0; i < tChevaux.Length; i++)
                 {
-                    Console.CursorLeft = iArrive + 14;
+                    Console.CursorLeft = iArrive + 13;
                     Console.Write("|"); // détermine le point d'arrivé.
                     Console.CursorLeft = 0;
                     tChevaux[i] += random.Next(4);
-                    Console.WriteLine("Cheval {0,2} : {1}#", i + 1, new string('-', tChevaux[i]));
+                    Console.WriteLine("Cheval {0,2} : {1}#", i + 1, new string('-', tChevaux[i])); //génère le "cheval" + le numéro du cheval.
+
                     if (tChevaux[i] > iArrive)
                     {
                         bfin = true;
@@ -60,12 +60,37 @@ namespace Projet_Jockey
                 }
                     
             }
-            while (!bfin);
+            while (!bfin); //Qunad un cheval dépasse la ligne le programme s'arrete.
 
             int iMeilleurDisatance = tChevaux.Max();
             int iMeilleurCheval = tChevaux.ToList().IndexOf(iMeilleurDisatance);
-            Console.WriteLine("Le cheval {0} est vainqueur", iMeilleurCheval + 1);
-            Console.ReadKey();
+
+            if(iMeilleurCheval+1 == iParis)
+            {
+                Console.WriteLine("\nBravo, vous avez gagnez.");
+            }
+
+            else
+            {
+                Console.WriteLine("\nDommage, vous avez perdu peut-être la prochaine fois.")
+            }
+
+            Console.WriteLine("\nLe cheval {0} est vainqueur", iMeilleurCheval + 1);
+
+            Console.Write("****************************************");
+            Console.WriteLine("\nPresser sur la touche Escape deux fois pour fermer le programme");
+            while (true)
+            {
+                ConsoleKeyInfo result = Console.ReadKey();
+                if (result.Key == ConsoleKey.Escape)
+                {
+                    Console.ReadKey();
+                    break;
+                }
+
+            }
+            
+            
         }
     }
 
