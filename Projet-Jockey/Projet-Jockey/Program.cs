@@ -30,8 +30,46 @@ namespace Projet_Jockey
 
             Console.WriteLine("Bienvenue à la course des chevaux !!");
             Console.WriteLine("****************************************");
-            Console.Write("Quel est votre nom ? ");
-            strNom = Console.ReadLine();
+            Console.Write("Combien de joueurs êtes-vous? ");
+            iNbJoueurs = Convert.ToInt32(Console.ReadLine());
+            switch(iNbJoueurs)
+            {
+                case 1:  Console.Write("Quel est votre nom ? ");
+                         strNom = Console.ReadLine();
+                         break;
+
+                case 2:
+                    string strJoueur2;
+                    Console.Write("Quel est votre nom joueur 1 ? ");
+                    strNom = Console.ReadLine();
+                    Console.Write("Quel est votre nom joueur 2 ? ");
+                    strJoueur2 = Console.ReadLine();
+                    break;
+
+                case 3:
+                    string strJoueur3;
+                    Console.Write("Quel est votre nom  joueur 1? ");
+                    strNom = Console.ReadLine();
+                    Console.Write("Quel est votre nom joueur 2 ? ");
+                    strJoueur2 = Console.ReadLine();
+                    Console.Write("Quel est votre nom joueur 3 ? ");
+                    strJoueur3 = Console.ReadLine();
+                    break;
+
+                case 4:
+                    string strJoueur4;
+                    Console.Write("Quel est votre nom  joueur 1? ");
+                    strNom = Console.ReadLine();
+                    Console.Write("Quel est votre nom joueur 2 ? ");
+                    strJoueur2 = Console.ReadLine();
+                    Console.Write("Quel est votre nom joueur 3 ? ");
+                    strJoueur3 = Console.ReadLine();
+                    Console.Write("Quel est votre nom joueur 4 ? ");
+                    strJoueur4 = Console.ReadLine();
+                    break;
+
+            }
+            
             Console.WriteLine("\n*       Les paris sont ouverts !       *");
             Console.WriteLine("****************************************");
             Console.Write("Sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
