@@ -34,11 +34,49 @@ namespace Projet_Jockey
             strNom = Console.ReadLine();
             Console.WriteLine("\n*       Les paris sont ouverts !       *");
             Console.WriteLine("****************************************");
-            Console.Write("Sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
-            iParis = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("****************************************\n");
-            Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");//Consigne de l'exercice.
+
+            bool bDefaut = true;
+            do
+            {
+                Console.Write("Sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                iParis = Convert.ToInt32(Console.ReadLine());
+                switch (iParis)
+                {
+                    case 1:
+                        Console.WriteLine("****************************************\n");
+                        Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                        bDefaut = true;
+                        break;
+
+                    case 2:
+                        Console.WriteLine("****************************************\n");
+                        Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                        bDefaut = true;
+                        break;
+
+                    case 3:
+                        Console.WriteLine("****************************************\n");
+                        Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                        bDefaut = true;
+                        break;
+
+                    case 4:
+                        Console.WriteLine("****************************************\n");
+                        Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                        bDefaut = true;
+                        break;
+
+                    default:
+                        Console.WriteLine("****************************************\n");
+                        Console.WriteLine("Erreur, veuillez mettre un chiffre entre 1 et 4 ");
+                        bDefaut = false;
+                        break;
+                }
+            }
+            while (!bDefaut);
+            
+           
 
             
 
