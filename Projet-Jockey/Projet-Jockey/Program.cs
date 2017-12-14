@@ -33,7 +33,7 @@ namespace Projet_Jockey
             strNom = Console.ReadLine();
             Console.WriteLine("\n*       Les paris sont ouverts !       *");
             Console.WriteLine("****************************************");
-            Console.Write("Sur quel cheval désirez vous misez (1,2,3 ou 4)? ");
+            Console.Write("Sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
             iParis = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("****************************************\n");
@@ -67,12 +67,12 @@ namespace Projet_Jockey
 
             if(iMeilleurCheval+1 == iParis)
             {
-                Console.WriteLine("\nBravo, vous avez gagnez.");
+                Console.WriteLine("\nFécilitaions {0}, le cheval {1} à gagné.", strNom, iParis);
             }
 
             else
             {
-                Console.WriteLine("\nDommage, vous avez perdu peut-être la prochaine fois.")
+                Console.WriteLine("\nDommage {0}, le cheval {1} a perdu, peut-être la prochaine fois.", strNom, iParis);
             }
 
             Console.WriteLine("\nLe cheval {0} est vainqueur", iMeilleurCheval + 1);
