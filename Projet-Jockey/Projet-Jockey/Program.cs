@@ -24,8 +24,14 @@ namespace Projet_Jockey
             int[] tChevaux = new int[] { 0, 0, 0, 0 }; //déclaration d'un tableau
             bool bfin = false;
             Random random = new Random();
-            string strNom;
-            int iParis;
+            string strNom = "Joueur";
+            string strJoueur2 = "Joueur2";
+            string strJoueur3 = "Joueur3";
+            string strJoueur4 = "Joueur4";
+            int iParis = 0;
+            int iParis2 = 0;
+            int iParis3= 0;
+            int iParis4 = 0;
             int iNbJoueurs;
 
             Console.WriteLine("Bienvenue à la course des chevaux !!");
@@ -43,8 +49,6 @@ namespace Projet_Jockey
                     break;
 
                 case 2:
-                    string strJoueur2;
-                    int iParis2;
                     Console.Write("Quel est votre nom joueur 1 ? ");
                     strNom = Console.ReadLine();
                     Console.Write("Quel est votre nom joueur 2 ? ");
@@ -58,8 +62,6 @@ namespace Projet_Jockey
                     break;
 
                 case 3:
-                    string strJoueur3;
-                    int iParis3;
                     Console.Write("Quel est votre nom  joueur 1? ");
                     strNom = Console.ReadLine();
                     Console.Write("Quel est votre nom joueur 2 ? ");
@@ -77,9 +79,7 @@ namespace Projet_Jockey
                     break;
 
                 case 4:
-                    string strJoueur4;
-                    int iParis4;
-                    Console.Write("Quel est votre nom  joueur 1? ");
+                    Console.Write("Quel est votre nom  joueur 1 ? ");
                     strNom = Console.ReadLine();
                     Console.Write("Quel est votre nom joueur 2 ? ");
                     strJoueur2 = Console.ReadLine();
@@ -132,19 +132,38 @@ namespace Projet_Jockey
             int iMeilleurDisatance = tChevaux.Max();
             int iMeilleurCheval = tChevaux.ToList().IndexOf(iMeilleurDisatance);
 
-            
-            /*if(iMeilleurCheval+1 == iParis)
+            if (iMeilleurCheval + 1 == iParis)
             {
-                Console.WriteLine("\nFécilitaions {0}, le cheval {1} à gagné.",  iParis);
+                Console.WriteLine("\nFécilitaions {0}, le cheval {1} à gagné.",strNom, iParis);
             }
 
             else
             {
-                Console.WriteLine("\nDommage {0}, le cheval {1} a perdu, peut-être la prochaine fois.",  iParis);
+                if (iMeilleurCheval + 1 == iParis2)
+                {
+                    Console.WriteLine("\nFécilitaions {0}, le cheval {1} à gagné.", strJoueur2, iParis2);
+                }
+                else
+                {
+                    if(iMeilleurCheval+1 == iParis3)
+                    {
+                        Console.WriteLine("\nFécilitaions {0}, le cheval {1} à gagné.", strJoueur3, iParis3);
+                    }
+                    else
+                    {
+                        if(iMeilleurCheval + 1 == iParis4)
+                        {
+                            Console.WriteLine("\nFécilitaions {0}, le cheval {1} à gagné.", strJoueur4, iParis4);
+                        }
+                        else
+                        {
+                            Console.WriteLine("\ndommage vous avez perdu, peut-être la prochaine fois.");
+                        }
+                    }
+                }
             }
-            */
-            
-            Console.Write("****************************************");
+                        
+            Console.Write("\n****************************************");
             Console.WriteLine("\nPresser sur la touche Escape deux fois pour fermer le programme");
 
             while (true)
