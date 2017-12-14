@@ -24,61 +24,434 @@ namespace Projet_Jockey
             int[] tChevaux = new int[] { 0, 0, 0, 0 }; //déclaration d'un tableau
             bool bfin = false;
             Random random = new Random();
-            string strNom;
-            int iParis;
-            
+            string strNom = "Joueur";
+            string strJoueur2 = "Joueur2";
+            string strJoueur3 = "Joueur3";
+            string strJoueur4 = "Joueur4";
+            int iParis = 0;
+            int iParis2 = 0;
+            int iParis3 = 0;
+            int iParis4 = 0;
+            int iNbJoueurs;
+            bool bDefault = false;
+
 
             Console.WriteLine("Bienvenue à la course des chevaux !!");
             Console.WriteLine("****************************************");
-            Console.Write("Quel est votre nom ? ");
-            strNom = Console.ReadLine();
-            Console.WriteLine("\n*       Les paris sont ouverts !       *");
-            Console.WriteLine("****************************************");
 
-
-            bool bDefaut = true;
-            do
+            Console.Write("Combien de joueurs êtes-vous? ");
+            iNbJoueurs = Convert.ToInt32(Console.ReadLine());
+            switch (iNbJoueurs)
             {
-                Console.Write("Sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
-                iParis = Convert.ToInt32(Console.ReadLine());
-                switch (iParis)
-                {
-                    case 1:
-                        Console.WriteLine("****************************************\n");
-                        Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
-                        bDefaut = true;
-                        break;
+                case 1:
+                    Console.Write("Quel est votre nom ? ");
+                    strNom = Console.ReadLine();
+                    Console.WriteLine("\n*       Les paris sont ouverts !       *");
+                    Console.WriteLine("****************************************");
+                                        
+                    do
+                    {
+                        Console.Write("Sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                        iParis = Convert.ToInt32(Console.ReadLine());
+                        switch (iParis)
+                        {
+                            case 1:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
 
-                    case 2:
-                        Console.WriteLine("****************************************\n");
-                        Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
-                        bDefaut = true;
-                        break;
+                            case 2:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
 
-                    case 3:
-                        Console.WriteLine("****************************************\n");
-                        Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
-                        bDefaut = true;
-                        break;
+                            case 3:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
 
-                    case 4:
-                        Console.WriteLine("****************************************\n");
-                        Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
-                        bDefaut = true;
-                        break;
+                            case 4:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
 
-                    default:
-                        Console.WriteLine("****************************************\n");
-                        Console.WriteLine("Erreur, veuillez mettre un chiffre entre 1 et 4 ");
-                        bDefaut = false;
-                        break;
-                }
+                            default:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Erreur, veuillez mettre un chiffre entre 1 et 4 ");
+                                bDefault = false;
+                                break;
+                        }
+                    }
+                    while (!bDefault);
+                    break;
+
+                case 2:
+                    Console.Write("Quel est votre nom joueur 1 ? ");
+                    strNom = Console.ReadLine();
+                    Console.Write("Quel est votre nom joueur 2 ? ");
+                    strJoueur2 = Console.ReadLine();
+                    Console.WriteLine("\n*       Les paris sont ouverts !       *");
+                    Console.WriteLine("****************************************");
+                    
+                    do
+                    {
+                        Console.Write("Joueur 1,sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                        iParis = Convert.ToInt32(Console.ReadLine());
+                        switch (iParis)
+                        {
+                            case 1:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 2:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 3:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 4:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            default:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Erreur, veuillez mettre un chiffre entre 1 et 4 ");
+                                bDefault = false;
+                                break;
+                        }
+                    }
+                    while (!bDefault);
+                    Console.Write("Joueur 2, sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                    iParis2 = Convert.ToInt32(Console.ReadLine());
+                    break;
+
+                case 3:
+                    Console.Write("Quel est votre nom  joueur 1? ");
+                    strNom = Console.ReadLine();
+                    Console.Write("Quel est votre nom joueur 2 ? ");
+                    strJoueur2 = Console.ReadLine();
+                    Console.Write("Quel est votre nom joueur 3 ? ");
+                    strJoueur3 = Console.ReadLine();
+                    Console.WriteLine("\n*       Les paris sont ouverts !       *");
+                    Console.WriteLine("****************************************");
+                    Console.Write("Joueur 1, sur quel cheval désirez-vous miser (1,2,3 ou 4)? "); ;
+                    iParis = Convert.ToInt32(Console.ReadLine());
+                    do
+                    {
+                        Console.Write("Sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                        iParis = Convert.ToInt32(Console.ReadLine());
+                        switch (iParis)
+                        {
+                            case 1:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 2:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 3:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 4:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            default:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Erreur, veuillez mettre un chiffre entre 1 et 4 ");
+                                bDefault = false;
+                                break;
+                        }
+                    }
+                    while (!bDefault);
+                    Console.Write("Joueur 2, sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                    iParis2 = Convert.ToInt32(Console.ReadLine());
+                    do
+                    {
+                        Console.Write("Sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                        iParis = Convert.ToInt32(Console.ReadLine());
+                        switch (iParis)
+                        {
+                            case 1:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 2:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 3:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 4:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            default:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Erreur, veuillez mettre un chiffre entre 1 et 4 ");
+                                bDefault = false;
+                                break;
+                        }
+                    }
+                    while (!bDefault);
+                    Console.Write("Joueur 3, sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                    iParis3 = Convert.ToInt32(Console.ReadLine());
+                    do
+                    {
+                        Console.Write("Sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                        iParis = Convert.ToInt32(Console.ReadLine());
+                        switch (iParis)
+                        {
+                            case 1:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 2:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 3:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 4:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            default:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Erreur, veuillez mettre un chiffre entre 1 et 4 ");
+                                bDefault = false;
+                                break;
+                        }
+                    }
+                    while (!bDefault);
+                    break;
+
+                case 4:
+                    Console.Write("Quel est votre nom  joueur 1 ? ");
+                    strNom = Console.ReadLine();
+                    Console.Write("Quel est votre nom joueur 2 ? ");
+                    strJoueur2 = Console.ReadLine();
+                    Console.Write("Quel est votre nom joueur 3 ? ");
+                    strJoueur3 = Console.ReadLine();
+                    Console.Write("Quel est votre nom joueur 4 ? ");
+                    strJoueur4 = Console.ReadLine();
+                    Console.WriteLine("\n*       Les paris sont ouverts !       *");
+                    Console.WriteLine("****************************************");
+                    Console.Write("Joueur 1, sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                    iParis = Convert.ToInt32(Console.ReadLine());
+                    do
+                    {
+                        Console.Write("Sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                        iParis = Convert.ToInt32(Console.ReadLine());
+                        switch (iParis)
+                        {
+                            case 1:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 2:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 3:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 4:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            default:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Erreur, veuillez mettre un chiffre entre 1 et 4 ");
+                                bDefault = false;
+                                break;
+                        }
+                    }
+                    while (!bDefault);
+                    Console.Write("Joueur 2, sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                    iParis2 = Convert.ToInt32(Console.ReadLine());
+                    do
+                    {
+                        Console.Write("Sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                        iParis = Convert.ToInt32(Console.ReadLine());
+                        switch (iParis)
+                        {
+                            case 1:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 2:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 3:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 4:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            default:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Erreur, veuillez mettre un chiffre entre 1 et 4 ");
+                                bDefault = false;
+                                break;
+                        }
+                    }
+                    while (!bDefault);
+                    Console.Write("Joueur 3, sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                    iParis3 = Convert.ToInt32(Console.ReadLine());
+                    do
+                    {
+                        Console.Write("Sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                        iParis = Convert.ToInt32(Console.ReadLine());
+                        switch (iParis)
+                        {
+                            case 1:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 2:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 3:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 4:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            default:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Erreur, veuillez mettre un chiffre entre 1 et 4 ");
+                                bDefault = false;
+                                break;
+                        }
+                    }
+                    while (!bDefault);
+                    Console.Write("Joueur 4, sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                    iParis4 = Convert.ToInt32(Console.ReadLine());
+                    do
+                    {
+                        Console.Write("Sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                        iParis = Convert.ToInt32(Console.ReadLine());
+                        switch (iParis)
+                        {
+                            case 1:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 2:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 3:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            case 4:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");
+                                bDefault = true;
+                                break;
+
+                            default:
+                                Console.WriteLine("****************************************\n");
+                                Console.WriteLine("Erreur, veuillez mettre un chiffre entre 1 et 4 ");
+                                bDefault = false;
+                                break;
+                        }
+                    }
+                    while (!bDefault);
+                    break;
+
             }
-            while (!bDefaut);
+            
+
+                    
+            
+
             
            
 
-            
 
             do
             {
@@ -104,18 +477,38 @@ namespace Projet_Jockey
             int iMeilleurDisatance = tChevaux.Max();
             int iMeilleurCheval = tChevaux.ToList().IndexOf(iMeilleurDisatance);
 
-            if(iMeilleurCheval+1 == iParis)
+            if (iMeilleurCheval + 1 == iParis)
             {
-                Console.WriteLine("\nFécilitaions {0}, le cheval {1} à gagné.", strNom, iParis);
+                Console.WriteLine("\nFécilitaions {0}, le cheval {1} à gagné.",strNom, iParis);
             }
 
             else
             {
-                Console.WriteLine("\nDommage {0}, le cheval {1} a perdu, peut-être la prochaine fois.", strNom, iParis);
+                if (iMeilleurCheval + 1 == iParis2)
+                {
+                    Console.WriteLine("\nFécilitaions {0}, le cheval {1} à gagné.", strJoueur2, iParis2);
+                }
+                else
+                {
+                    if(iMeilleurCheval+1 == iParis3)
+                    {
+                        Console.WriteLine("\nFécilitaions {0}, le cheval {1} à gagné.", strJoueur3, iParis3);
+                    }
+                    else
+                    {
+                        if(iMeilleurCheval + 1 == iParis4)
+                        {
+                            Console.WriteLine("\nFécilitaions {0}, le cheval {1} à gagné.", strJoueur4, iParis4);
+                        }
+                        else
+                        {
+                            Console.WriteLine("\ndommage vous avez perdu, peut-être la prochaine fois.");
+                        }
+                    }
+                }
             }
-
-            
-            Console.Write("****************************************");
+                        
+            Console.Write("\n****************************************");
             Console.WriteLine("\nPresser sur la touche Escape deux fois pour fermer le programme");
 
             while (true)
