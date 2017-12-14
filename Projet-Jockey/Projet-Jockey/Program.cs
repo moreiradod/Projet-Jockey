@@ -75,10 +75,10 @@ namespace Projet_Jockey
                 Console.WriteLine("\nDommage {0}, le cheval {1} a perdu, peut-être la prochaine fois.", strNom, iParis);
             }
 
-            Console.WriteLine("\nLe cheval {0} est vainqueur", iMeilleurCheval + 1);
-
+            
             Console.Write("****************************************");
             Console.WriteLine("\nPresser sur la touche Escape deux fois pour fermer le programme");
+
             while (true)
             {
                 ConsoleKeyInfo result = Console.ReadKey();
