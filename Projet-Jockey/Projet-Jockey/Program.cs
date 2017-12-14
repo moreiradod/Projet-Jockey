@@ -36,28 +36,49 @@ namespace Projet_Jockey
             {
                 case 1:  Console.Write("Quel est votre nom ? ");
                          strNom = Console.ReadLine();
-                         break;
+                    Console.WriteLine("\n*       Les paris sont ouverts !       *");
+                    Console.WriteLine("****************************************");
+                    Console.Write("Sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                    iParis = Convert.ToInt32(Console.ReadLine());
+                    break;
 
                 case 2:
                     string strJoueur2;
+                    int iParis2;
                     Console.Write("Quel est votre nom joueur 1 ? ");
                     strNom = Console.ReadLine();
                     Console.Write("Quel est votre nom joueur 2 ? ");
                     strJoueur2 = Console.ReadLine();
+                    Console.WriteLine("\n*       Les paris sont ouverts !       *");
+                    Console.WriteLine("****************************************");
+                    Console.Write("Joueur 1, sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                    iParis = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Joueur 2, sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                    iParis2 = Convert.ToInt32(Console.ReadLine());
                     break;
 
                 case 3:
                     string strJoueur3;
+                    int iParis3;
                     Console.Write("Quel est votre nom  joueur 1? ");
                     strNom = Console.ReadLine();
                     Console.Write("Quel est votre nom joueur 2 ? ");
                     strJoueur2 = Console.ReadLine();
                     Console.Write("Quel est votre nom joueur 3 ? ");
                     strJoueur3 = Console.ReadLine();
+                    Console.WriteLine("\n*       Les paris sont ouverts !       *");
+                    Console.WriteLine("****************************************");
+                    Console.Write("Joueur 1, sur quel cheval désirez-vous miser (1,2,3 ou 4)? "); ;
+                    iParis = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Joueur 2, sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                    iParis2 = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Joueur 3, sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                    iParis3 = Convert.ToInt32(Console.ReadLine());
                     break;
 
                 case 4:
                     string strJoueur4;
+                    int iParis4;
                     Console.Write("Quel est votre nom  joueur 1? ");
                     strNom = Console.ReadLine();
                     Console.Write("Quel est votre nom joueur 2 ? ");
@@ -66,20 +87,26 @@ namespace Projet_Jockey
                     strJoueur3 = Console.ReadLine();
                     Console.Write("Quel est votre nom joueur 4 ? ");
                     strJoueur4 = Console.ReadLine();
+                    Console.WriteLine("\n*       Les paris sont ouverts !       *");
+                    Console.WriteLine("****************************************");
+                    Console.Write("Joueur 1, sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                    iParis = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Joueur 2, sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                    iParis2 = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Joueur 3, sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                    iParis3 = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Joueur 4, sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
+                    iParis4 = Convert.ToInt32(Console.ReadLine());
                     break;
 
             }
             
-            Console.WriteLine("\n*       Les paris sont ouverts !       *");
-            Console.WriteLine("****************************************");
-            Console.Write("Sur quel cheval désirez-vous miser (1,2,3 ou 4)? ");
-            iParis = Convert.ToInt32(Console.ReadLine());
-
+            
             Console.WriteLine("****************************************\n");
             Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");//Consigne de l'exercice.
 
-            Console.Write("Combien de joueurs êtes-vous? ");
-            iNbJoueurs = Convert.ToInt32(Console.ReadLine());
+            
+           
 
             do
             {
@@ -105,15 +132,20 @@ namespace Projet_Jockey
             int iMeilleurDisatance = tChevaux.Max();
             int iMeilleurCheval = tChevaux.ToList().IndexOf(iMeilleurDisatance);
 
-            if(iMeilleurCheval+1 == iParis)
+            switch(iMeilleurCheval+1)
             {
-                Console.WriteLine("\nFécilitaions {0}, le cheval {1} à gagné.", strNom, iParis);
+                case iParis: Console.WriteLine("\nFécilitaions {0}, le cheval {1} à gagné.", iParis);
+                    break;
             }
+            //if(iMeilleurCheval+1 == iParis)
+            //{
+             //   Console.WriteLine("\nFécilitaions {0}, le cheval {1} à gagné.",  iParis);
+            //}
 
-            else
-            {
-                Console.WriteLine("\nDommage {0}, le cheval {1} a perdu, peut-être la prochaine fois.", strNom, iParis);
-            }
+            //else
+            //{
+             //   Console.WriteLine("\nDommage {0}, le cheval {1} a perdu, peut-être la prochaine fois.",  iParis);
+            //}
 
             
             Console.Write("****************************************");
