@@ -26,6 +26,7 @@ namespace Projet_Jockey
             Random random = new Random();
             string strNom;
             int iParis;
+            int iNbJoueurs;
 
             Console.WriteLine("Bienvenue à la course des chevaux !!");
             Console.WriteLine("****************************************");
@@ -39,7 +40,8 @@ namespace Projet_Jockey
             Console.WriteLine("****************************************\n");
             Console.WriteLine("Appuyez de manière répétée sur une touche pour faire avancer les chevaux. ");//Consigne de l'exercice.
 
-            
+            Console.Write("Combien de joueurs êtes-vous? ");
+            iNbJoueurs = Convert.ToInt32(Console.ReadLine());
 
             do
             {
