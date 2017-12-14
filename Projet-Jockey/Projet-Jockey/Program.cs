@@ -132,21 +132,17 @@ namespace Projet_Jockey
             int iMeilleurDisatance = tChevaux.Max();
             int iMeilleurCheval = tChevaux.ToList().IndexOf(iMeilleurDisatance);
 
-            switch(iMeilleurCheval+1)
+            
+            /*if(iMeilleurCheval+1 == iParis)
             {
-                case iParis: Console.WriteLine("\nFécilitaions {0}, le cheval {1} à gagné.", iParis);
-                    break;
+                Console.WriteLine("\nFécilitaions {0}, le cheval {1} à gagné.",  iParis);
             }
-            //if(iMeilleurCheval+1 == iParis)
-            //{
-             //   Console.WriteLine("\nFécilitaions {0}, le cheval {1} à gagné.",  iParis);
-            //}
 
-            //else
-            //{
-             //   Console.WriteLine("\nDommage {0}, le cheval {1} a perdu, peut-être la prochaine fois.",  iParis);
-            //}
-
+            else
+            {
+                Console.WriteLine("\nDommage {0}, le cheval {1} a perdu, peut-être la prochaine fois.",  iParis);
+            }
+            */
             
             Console.Write("****************************************");
             Console.WriteLine("\nPresser sur la touche Escape deux fois pour fermer le programme");
