@@ -161,7 +161,7 @@ namespace Projet_Jockey
                     {
                         try
                         {
-                            Console.Write("{0}, sur quel cheval désirez-vous miser (1,2,3 ou 4) ? ", strJoueur);
+                            Console.Write("{0},sur quel cheval désirez-vous miser (1,2,3 ou 4) ? ", strJoueur);
                             iParis = Convert.ToInt32(Console.ReadLine());
                         }
                         catch
@@ -187,7 +187,7 @@ namespace Projet_Jockey
                     {
                         try
                         {
-                            Console.Write("{0} ,sur quel cheval désirez-vous miser (1,2,3 ou 4) ? ", strJoueur3);
+                            Console.Write("{0},sur quel cheval désirez-vous miser (1,2,3 ou 4) ? ", strJoueur3);
                             iParis3 = Convert.ToInt32(Console.ReadLine());
                         }
                         catch
@@ -200,7 +200,7 @@ namespace Projet_Jockey
                     {
                         try
                         {
-                            Console.Write("{0} ,sur quel cheval désirez-vous miser (1,2,3 ou 4) ? ", strJoueur4);
+                            Console.Write("{0},sur quel cheval désirez-vous miser (1,2,3 ou 4) ? ", strJoueur4);
                             iParis4 = Convert.ToInt32(Console.ReadLine());
                         }
                         catch
